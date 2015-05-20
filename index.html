@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <meta name="keywords" content="remark,remarkjs,markdown,slideshow,presentation"/>
+  <meta name="description" content="A simple, in-browser, markdown-driven slideshow tool."/>
+  <title>Java 9 - A very brief preview</title>
+  <style type="text/css">
+    @import url(//fonts.googleapis.com/css?family=Droid+Serif);
+    @import url(//fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+    @import url(//fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+    body {
+      font-family: 'Droid Serif';
+    }
+
+    h1, h2, h3 {
+      font-family: 'Yanone Kaffeesatz';
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+
+    .remark-slide-content h1 {
+      font-size: 3em;
+    }
+
+    .remark-slide-content h2 {
+      font-size: 2em;
+    }
+
+    .remark-slide-content h3 {
+      font-size: 1.6em;
+    }
+
+    .footnote {
+      position: absolute;
+      bottom: 3em;
+    }
+
+    li p {
+      line-height: 1.25em;
+    }
+
+    .red {
+      color: #fa0000;
+    }
+
+    .large {
+      font-size: 2em;
+    }
+
+    a, a > code {
+      color: black;
+      text-decoration: none;
+    }
+
+    code {
+      -moz-border-radius: 5px;
+      -web-border-radius: 5px;
+      background: #e7e8e2;
+      border-radius: 5px;
+    }
+
+    .remark-code, .remark-inline-code {
+      font-family: 'Ubuntu Mono';
+    }
+
+    .remark-code-line-highlighted {
+      background-color: #373832;
+    }
+
+    .pull-left {
+      float: left;
+      width: 47%;
+    }
+
+    .pull-right {
+      float: right;
+      width: 47%;
+    }
+
+    .pull-right ~ p {
+      clear: both;
+    }
+
+    #slideshow .slide .content code {
+      font-size: 0.8em;
+    }
+
+    #slideshow .slide .content pre code {
+      font-size: 0.9em;
+      padding: 15px;
+    }
+
+    .inverse {
+      background: #272822;
+      color: #777872;
+      text-shadow: 0 0 20px #333;
+    }
+
+    .inverse h1, .inverse h2 {
+      color: #f3f3f3;
+      line-height: 0.8em;
+    }
+
+    /* Slide-specific styling */
+    #slide-inverse .footnote {
+      bottom: 12px;
+      left: 20px;
+    }
+
+    #slide-how .slides {
+      font-size: 0.9em;
+      position: absolute;
+      top: 151px;
+      right: 140px;
+    }
+
+    #slide-how .slides h3 {
+      margin-top: 0.2em;
+    }
+
+    #slide-how .slides .first, #slide-how .slides .second {
+      padding: 1px 20px;
+      height: 90px;
+      width: 120px;
+      -moz-box-shadow: 0 0 10px #777;
+      -webkit-box-shadow: 0 0 10px #777;
+      box-shadow: 0 0 10px #777;
+    }
+
+    #slide-how .slides .first {
+      background: #fff;
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      z-index: 1;
+    }
+
+    #slide-how .slides .second {
+      position: relative;
+      background: #fff;
+      z-index: 0;
+    }
+
+    /* Two-column layout */
+    .left-column {
+      color: #777;
+      width: 23%;
+      height: 92%;
+      float: left;
+    }
+
+    .left-column h2:last-of-type, .left-column h3:last-child {
+      color: #000;
+    }
+
+    .right-column {
+      width: 75%;
+      float: right;
+      padding-top: 1em;
+    }
+
+    .vcenter h1, .vcenter h2 {
+      margin-top: 0;
+    }
+
+    /* more horizontal realestate */
+    .remark-slide-content {
+      padding-left: 2em;
+      padding-right: 2em;
+    }
+
+    .right-column-incremental {
+      width: 75%;
+      float: right;
+    }
+
+    .section-top-padding {
+      padding-top: 30px;
+    }
+
+	.super-mini .remark-code {
+	  font-size: 7px;
+	  padding-left: 10px;
+	}
+	
+	.example-usage {
+	  margin-top: -20px;
+	}
+	
+	.example-code code {
+	  background: #666 !important;
+	}
+
+	.example-code .remark-code-line-highlighted {
+	  background: #888;
+	}
+    
+    .jigsaw1-image img {
+      padding-top: 30px;
+      padding-left: 10px;
+      height: 550px;
+    }
+    
+    .jigsaw2-image img {
+      padding-top: 60px;
+      height: 450px;
+    }
+    
+    .copyright {
+      font-size: 12px;
+    }
+    
+    .incremental-bullets ul {
+      margin: 0;
+    }
+    
+    li {
+      margin-top: 5px;
+    }
+    
+    .narrow-bullets li {
+      margin-top: 0;
+    }
+    
+    .padding-top-5 {
+      padding-top: 5px;
+    }
+  </style>
+</head>
+<body>
+<textarea id="source">
+class: center, middle
+.vcenter[
+# Java 9
+## A very brief preview
+]
+
+
+
+---
+class: center, middle
+.vcenter[
+# April 14, 2015
+# September 22, 2016
+# September 22, 2017
+]
+
+
+
+---
+class: center, middle
+.vcenter[
+# Project Jigsaw
+## The big feature in Java 9
+]
+
+
+
+---
+class: center
+.jigsaw1-image[
+![Before](images/jigsaw1.png)
+]
+.copyright[
+Copyright © 2015, Oracle and/or its affiliates. All rights reserved.
+]
+
+
+
+---
+class: center
+.jigsaw2-image[
+![Before](images/jigsaw2.png)
+]
+.copyright[
+Copyright © 2015, Oracle and/or its affiliates. All rights reserved.
+]
+
+
+
+---
+class: center
+.jigsaw2-image[
+![Before](images/jigsaw3.png)
+]
+.copyright[
+Copyright © 2015, Oracle and/or its affiliates. All rights reserved.
+]
+
+
+
+---
+.left-column[
+## Modules are<br>for everyone!
+]
+.right-column[
+Very simple module-info.java
+```
+module org.example @ 1.0 {
+    requires jdk.base;
+    requires com.google.guava @ 18.0;
+    exports org.example.api;
+}
+```
+]
+--
+.right-column-incremental[
+
+```
+module org.example @ 1.0 {
+    requires jdk.base;
+    requires com.google.guava @ 18.0;
+    exports org.example.api;
+*   exports com.google.common;
+}
+```
+]
+
+
+
+---
+.left-column[
+## <span style="padding-left: 5px;">jshell, aka</span><br> the Java REPL
+]
+.right-column[
+```bash
+|  Welcome to JShell -- Version 0.508
+|  Type /help for help
+
+-> System.out.println("Hello world!")
+Hello world!
+
+-> 
+```
+]
+--
+.right-column-incremental[
+```bash
+-> (int) (Integer.MAX_VALUE + 1)
+|  Expression value is: -2147483648
+|    assigned to temporary variable $1 of type int
+```
+]
+--
+.right-column-incremental[
+```bash
+-> (long) (Integer.MAX_VALUE + 1)
+|  Expression value is: -2147483648
+|    assigned to temporary variable $2 of type long
+```
+]
+--
+.right-column-incremental[
+```bash
+-> (long) (Integer.MAX_VALUE + 1L)
+|  Expression value is: 2147483648
+|    assigned to temporary variable $3 of type long
+```
+]
+
+
+
+---
+.left-column[
+## Compile for Older Platform Versions
+]
+.right-column[
+```
+class PrintTheArgs {
+  public static void main(String... args) {
+    System.out.println(String.join(", ", args));
+  }
+}
+```
+
+```bash
+javac -source 1.6 -target 1.6 Test.java
+```
+]
+
+
+
+---
+.left-column[
+## New<br>Version-String Scheme
+]
+.right-column[
+Current scheme
+.incremental-bullets[
+* Minor releases containing changes beyond security fixes are multiples of 20
+* Security releases based on the previous minor release are odd numbers incremented by five, or by six if necessary in order to keep the update number odd
+]
+]
+--
+.right-column-incremental[.incremental-bullets[
+* e.g. 1.8.0, 1.8.0_5, 1.8.0_11, 1.8.0_20, 1.8.0_25, 1.8.0_31, 1.8.0_40, 1.8.0_45
+]]
+--
+
+.right-column[
+<div style="margin: 20px 0;">
+JDK 9+ scheme: MAJOR.MINOR.SECURITY
+</div>
+]
+--
+.right-column-incremental[.incremental-bullets[.narrow-bullets[
+* 1.8.0 &rArr; 8.0.0
+]]]
+--
+.right-column-incremental[.incremental-bullets[.narrow-bullets[
+* 1.8.0_05 &rArr; 8.0.1
+]]]
+--
+.right-column-incremental[.incremental-bullets[.narrow-bullets[
+* 1.8.0_11 &rArr; 8.0.2
+]]]
+--
+.right-column-incremental[.incremental-bullets[.narrow-bullets[
+* 1.8.0_20 &rArr; 8.1.2
+]]]
+--
+.right-column-incremental[.incremental-bullets[.narrow-bullets[
+* 1.8.0_25 &rArr; 8.1.3
+]]]
+--
+.right-column-incremental[.incremental-bullets[.narrow-bullets[
+* 1.8.0_31 &rArr; 8.1.4
+]]]
+--
+.right-column-incremental[.incremental-bullets[.narrow-bullets[
+* 1.8.0_40 &rArr; 8.2.4
+]]]
+--
+.right-column-incremental[.incremental-bullets[.narrow-bullets[
+* 1.8.0_45 &rArr; 8.2.5
+]]]
+
+
+
+---
+.left-column[
+## More Polyglot!
+]
+.right-column[
+Parser API for Nashorn
+
+Java-Level JVM Compiler Interface
+]
+
+
+
+---
+.left-column[
+## Java 10?
+]
+.right-column[
+Value Types
+* "Codes like a class, works like an int!"
+* Navigate array of value types very fast
+  * Also see http://objectlayout.org
+* Other optimizations become possible
+  * Java 8's Optional<T> &rArr; Value Type
+  * Iterators without memory allocation
+* See http://www.infoq.com/presentations/java-9-10
+]
+--
+.right-column-incremental[
+Generic Specialization
+* E.g. List&amp;lt;int&amp;gt;
+* Related to Value Types
+]
+
+
+
+
+</textarea>
+<script src="//gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+  var hljs = remark.highlighter.engine;
+</script>
+<script src="//gnab.github.io/remark/remark.language.js" type="text/javascript"></script>
+<script type="text/javascript">
+  var slideshow = remark.create({
+      highlightStyle: 'sunburst',
+      highlightLanguage: 'java'
+    }) ;
+</script>
+</body>
+</html>
